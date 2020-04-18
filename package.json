@@ -1,0 +1,21 @@
+{
+  "name": "logger-library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": " yarn babel && yarn uglify ",
+    "uglify": "uglifyjs dist/logger.js --output dist/logger.js",
+    "babel": "babel src --out-dir dist --presets=@babel/env --source-type=script"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-plugin-transform-remove-strict-mode": "^0.0.2",
+    "uglify-js": "^3.9.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7"
+  }
+}
